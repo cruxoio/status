@@ -50,7 +50,7 @@ jobs:
             sudo warp-cli --accept-tos register
             sudo warp-cli --accept-tos set-mode warp+doh
             sudo warp-cli --accept-tos connect
-      
+
           elif [ "${{ inputs.mode }}" == 'wireguard' ]; then
             echo "WARP mode: wireguard."
             sudo apt-get -y update
@@ -64,23 +64,23 @@ jobs:
             PostDown = ip -4 rule delete from $LAN lookup main
             DNS = 8.8.8.8,8.8.4.4
             MTU = 1280
-            
+
             [Peer]
             PublicKey = bmXOC+F1FxEMF9dyiK2H5/1SUtzH0JuVo51h2wPfgyo=
             AllowedIPs = 0.0.0.0/0
             AllowedIPs = ::/0
             Endpoint = 162.159.193.10:2408" | sed "s/^[ ]+//g" | sudo tee /etc/wireguard/warp.conf
             sudo wg-quick up warp
-      
+
           else
             echo -e "WARP mode: ${{ inputs.mode }}.
-You can choose client or wireguard."
+            You can choose client or wireguard."
             exit 1
           fi
-      
+
           sleep 1
           sudo curl -s4m8 --retry 3 -A Mozilla https://api.ip.sb/geoip
-      
+
         shell: bash
       - name: Update response time
         uses: upptime/uptime-monitor@v1.36.2
