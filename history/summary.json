@@ -4,19 +4,19 @@
     "url": "https://demo.app.cruxo.io",
     "icon": "https://icons.duckduckgo.com/ip3/demo.app.cruxo.io.ico",
     "slug": "demo-app",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 999,
-    "timeDay": 772,
-    "timeWeek": 926,
-    "timeMonth": 972,
-    "timeYear": 999,
+    "status": "up",
+    "uptime": "99.93%",
+    "uptimeDay": "96.16%",
+    "uptimeWeek": "99.45%",
+    "uptimeMonth": "99.87%",
+    "uptimeYear": "99.93%",
+    "time": 998,
+    "timeDay": 866,
+    "timeWeek": 930,
+    "timeMonth": 971,
+    "timeYear": 998,
     "dailyMinutesDown": {
-      "2024-03-19": 0
+      "2024-03-19": 55
     }
   }
 ]
